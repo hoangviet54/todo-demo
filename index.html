@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo to do list</title>
+    <style>
+        .formControl {
+            display: flex;
+        }
+
+        #content {
+            width: 400px;
+            padding: 5px;
+            height: 45px;
+            line-height: 45px;
+            resize: none;
+        }
+
+        button {
+            margin-left: 10px;
+            height: 57px;
+            line-height: 57px;
+            border: none;
+            border-radius: 4px;
+            background-color: aquamarine;
+            font-weight: bold;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .taskList {
+            width: 600px;
+        }
+
+        .taskList h4{
+            font-size: 18px;
+        }
+
+        .taskList ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .taskList ul li {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f1f1f1;
+            margin-bottom: 5px;
+        }
+
+        .taskList ul li div {
+            width: 80%;
+        }
+
+        .taskList ul li a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+            font-size: 25px;
+        }
+
+        .taskList ul li a:nth-of-type(2) {
+            background: red;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="formControl">
+        <textarea class="content" id="content" placeholder="Nhập công việc"></textarea>
+        <button>Add task</button>
+    </div>  
+
+    <div class="taskList">
+        <h4>Danh sách công việc</h4>
+        <ul>
+            <div id="result"><p>Không có công việc nào!</p></div>
+            <!-- <li>
+                <div class="taskName">Học tiếng anh</div>
+                <a href="#">Sửa</a>
+                <a href="#">Xóa</a>
+            </li> -->
+        </ul>
+    </div>
+
+    <script src="task.js"></script>
+</body>
+</html>
